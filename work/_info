@@ -1,0 +1,418 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Andrew/Documents/Emerick/arm-processor
+vadder
+Z1 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+!s110 1542130714
+!i10b 1
+!s100 lL[13bJ?nWX>MaML?k2iF3
+IEF_`DmZVE<lPU1iP80Xd?0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 Adder_sv_unit
+S1
+R0
+w1542111593
+8C:/Users/Andrew/Documents/Emerick/arm-processor/Adder.sv
+FC:/Users/Andrew/Documents/Emerick/arm-processor/Adder.sv
+L0 1
+Z3 OP;L;10.4a;61
+r1
+!s85 0
+31
+!s108 1542130714.000000
+!s107 C:/Users/Andrew/Documents/Emerick/arm-processor/Adder.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Andrew/Documents/Emerick/arm-processor/Adder.sv|
+!s101 -O0
+!i113 1
+Z4 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+valu
+R1
+!s110 1542130727
+!i10b 1
+!s100 XiJ:9zYK6OB@IJg[W^M_;2
+IH8ON0lQzd88iMXe9lCfWY0
+R2
+!s105 Alu_sv_unit
+S1
+R0
+w1542112140
+8C:/Users/Andrew/Documents/Emerick/arm-processor/Alu.sv
+FC:/Users/Andrew/Documents/Emerick/arm-processor/Alu.sv
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1542130727.000000
+!s107 C:/Users/Andrew/Documents/Emerick/arm-processor/Alu.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Andrew/Documents/Emerick/arm-processor/Alu.sv|
+!s101 -O0
+!i113 1
+R4
+varm
+R1
+!s110 1542130687
+!i10b 1
+!s100 =YmcePn;H0LW[4hniS]^_2
+IGBg`^Vl@Z^Bi:I0g;n=_d3
+R2
+!s105 Arm_sv_unit
+S1
+R0
+w1542111008
+8C:/Users/Andrew/Documents/Emerick/arm-processor/Arm.sv
+FC:/Users/Andrew/Documents/Emerick/arm-processor/Arm.sv
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1542130687.000000
+!s107 C:/Users/Andrew/Documents/Emerick/arm-processor/Arm.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Andrew/Documents/Emerick/arm-processor/Arm.sv|
+!s101 -O0
+!i113 1
+R4
+vbench1
+R1
+!s110 1542130731
+!i10b 1
+!s100 zbN<=hSD87DR5[N1^zUP11
+IHS?E_9LRT:3^`JP6z3W_D2
+R2
+!s105 Bench1_sv_unit
+S1
+R0
+w1542112251
+8C:/Users/Andrew/Documents/Emerick/arm-processor/Bench1.sv
+FC:/Users/Andrew/Documents/Emerick/arm-processor/Bench1.sv
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1542130731.000000
+!s107 C:/Users/Andrew/Documents/Emerick/arm-processor/Bench1.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Andrew/Documents/Emerick/arm-processor/Bench1.sv|
+!s101 -O0
+!i113 1
+R4
+vcondcheck
+R1
+!s110 1542130701
+!i10b 1
+!s100 C8N>n^@FKVeKY8]17FQP93
+I]Ib<LbIm:FH:m<6M[2eAL3
+R2
+!s105 Condcheck_sv_unit
+S1
+R0
+w1542111345
+8C:/Users/Andrew/Documents/Emerick/arm-processor/Condcheck.sv
+FC:/Users/Andrew/Documents/Emerick/arm-processor/Condcheck.sv
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1542130701.000000
+!s107 C:/Users/Andrew/Documents/Emerick/arm-processor/Condcheck.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Andrew/Documents/Emerick/arm-processor/Condcheck.sv|
+!s101 -O0
+!i113 1
+R4
+vcondlogic
+R1
+!s110 1542130697
+!i10b 1
+!s100 7;D6miGLFU1ITf`W8?F620
+I[c:JBZKjic3lPn7gRUDCk2
+R2
+!s105 Condlogic_sv_unit
+S1
+R0
+w1542111125
+8C:/Users/Andrew/Documents/Emerick/arm-processor/Condlogic.sv
+FC:/Users/Andrew/Documents/Emerick/arm-processor/Condlogic.sv
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1542130697.000000
+!s107 C:/Users/Andrew/Documents/Emerick/arm-processor/Condlogic.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Andrew/Documents/Emerick/arm-processor/Condlogic.sv|
+!s101 -O0
+!i113 1
+R4
+vcontroller
+R1
+!s110 1542130691
+!i10b 1
+!s100 GRNO8iHOOl@Vz^Y`G`nRK0
+IkbC3>iM7XkPR1oT>CQD3f0
+R2
+!s105 Controller_sv_unit
+S1
+R0
+w1542111035
+8C:/Users/Andrew/Documents/Emerick/arm-processor/Controller.sv
+FC:/Users/Andrew/Documents/Emerick/arm-processor/Controller.sv
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1542130690.000000
+!s107 C:/Users/Andrew/Documents/Emerick/arm-processor/Controller.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Andrew/Documents/Emerick/arm-processor/Controller.sv|
+!s101 -O0
+!i113 1
+R4
+vdatapath
+R1
+!s110 1542130704
+!i10b 1
+!s100 5R5n=@imX044df<UCOd<Q0
+IZnBLdz8<K;k3d70N<`FWD0
+R2
+!s105 Datapath_sv_unit
+S1
+R0
+w1542111386
+8C:/Users/Andrew/Documents/Emerick/arm-processor/Datapath.sv
+FC:/Users/Andrew/Documents/Emerick/arm-processor/Datapath.sv
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1542130704.000000
+!s107 C:/Users/Andrew/Documents/Emerick/arm-processor/Datapath.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Andrew/Documents/Emerick/arm-processor/Datapath.sv|
+!s101 -O0
+!i113 1
+R4
+vdecoder
+R1
+!s110 1542130694
+!i10b 1
+!s100 7cISSJB[bIIeMC9@hJ`<i3
+IA>QfnKM4<mBe2Lg`bYP^40
+R2
+!s105 Decoder_sv_unit
+S1
+R0
+w1542111069
+8C:/Users/Andrew/Documents/Emerick/arm-processor/Decoder.sv
+FC:/Users/Andrew/Documents/Emerick/arm-processor/Decoder.sv
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1542130694.000000
+!s107 C:/Users/Andrew/Documents/Emerick/arm-processor/Decoder.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Andrew/Documents/Emerick/arm-processor/Decoder.sv|
+!s101 -O0
+!i113 1
+R4
+vdmem
+R1
+!s110 1542130680
+!i10b 1
+!s100 GHFTgIlU`>^_NLXK4R_NS3
+IcWPAQREaQj_`N;8>YbBM90
+R2
+!s105 Dmem_sv_unit
+S1
+R0
+w1542110951
+8C:/Users/Andrew/Documents/Emerick/arm-processor/Dmem.sv
+FC:/Users/Andrew/Documents/Emerick/arm-processor/Dmem.sv
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1542130680.000000
+!s107 C:/Users/Andrew/Documents/Emerick/arm-processor/Dmem.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Andrew/Documents/Emerick/arm-processor/Dmem.sv|
+!s101 -O0
+!i113 1
+R4
+vextend
+R1
+!s110 1542130711
+!i10b 1
+!s100 ol9?k[VSn4Bdk0[zbhP3g1
+I>L`zD`P`?_BaYXAD36@Fz2
+R2
+!s105 Extend_sv_unit
+S1
+R0
+w1542111479
+8C:/Users/Andrew/Documents/Emerick/arm-processor/Extend.sv
+FC:/Users/Andrew/Documents/Emerick/arm-processor/Extend.sv
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1542130711.000000
+!s107 C:/Users/Andrew/Documents/Emerick/arm-processor/Extend.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Andrew/Documents/Emerick/arm-processor/Extend.sv|
+!s101 -O0
+!i113 1
+R4
+vflopenr
+R1
+!s110 1542130718
+!i10b 1
+!s100 AgVHjB^`=EODf;?kBPgP=2
+IgkdE[>8doI@elYGhMo<[O1
+R2
+!s105 Flopenr_sv_unit
+S1
+R0
+w1542111603
+8C:/Users/Andrew/Documents/Emerick/arm-processor/Flopenr.sv
+FC:/Users/Andrew/Documents/Emerick/arm-processor/Flopenr.sv
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1542130717.000000
+!s107 C:/Users/Andrew/Documents/Emerick/arm-processor/Flopenr.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Andrew/Documents/Emerick/arm-processor/Flopenr.sv|
+!s101 -O0
+!i113 1
+R4
+vflopr
+R1
+!s110 1542130721
+!i10b 1
+!s100 AOcehC1ZUkWdP]XlTQB<10
+IH92WLinZH`ob5C4fFBMPa3
+R2
+!s105 Flopr_sv_unit
+S1
+R0
+w1542112071
+8C:/Users/Andrew/Documents/Emerick/arm-processor/Flopr.sv
+FC:/Users/Andrew/Documents/Emerick/arm-processor/Flopr.sv
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1542130721.000000
+!s107 C:/Users/Andrew/Documents/Emerick/arm-processor/Flopr.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Andrew/Documents/Emerick/arm-processor/Flopr.sv|
+!s101 -O0
+!i113 1
+R4
+vimem
+R1
+!s110 1542130684
+!i10b 1
+!s100 aG9I^ZLi;MiZ0XkcMVHk61
+IMJ^`?HSg@`YC1KbSYAnn81
+R2
+!s105 Imem_sv_unit
+S1
+R0
+w1542113323
+8C:/Users/Andrew/Documents/Emerick/arm-processor/Imem.sv
+FC:/Users/Andrew/Documents/Emerick/arm-processor/Imem.sv
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1542130684.000000
+!s107 C:/Users/Andrew/Documents/Emerick/arm-processor/Imem.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Andrew/Documents/Emerick/arm-processor/Imem.sv|
+!s101 -O0
+!i113 1
+R4
+vmux2
+R1
+!s110 1542130724
+!i10b 1
+!s100 EbLj7hTT[VR0Amz@N_6;Z2
+IZEbRhEbJk]mG96<fKVZJM3
+R2
+!s105 Mux2_sv_unit
+S1
+R0
+w1542112116
+8C:/Users/Andrew/Documents/Emerick/arm-processor/Mux2.sv
+FC:/Users/Andrew/Documents/Emerick/arm-processor/Mux2.sv
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1542130724.000000
+!s107 C:/Users/Andrew/Documents/Emerick/arm-processor/Mux2.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Andrew/Documents/Emerick/arm-processor/Mux2.sv|
+!s101 -O0
+!i113 1
+R4
+vregfile
+R1
+!s110 1542130707
+!i10b 1
+!s100 UNMfcMVz?=54`7KoD[i^[2
+IV9;5_h6563W33<M0F9RO61
+R2
+!s105 Regfile_sv_unit
+S1
+R0
+w1542111430
+8C:/Users/Andrew/Documents/Emerick/arm-processor/Regfile.sv
+FC:/Users/Andrew/Documents/Emerick/arm-processor/Regfile.sv
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1542130707.000000
+!s107 C:/Users/Andrew/Documents/Emerick/arm-processor/Regfile.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Andrew/Documents/Emerick/arm-processor/Regfile.sv|
+!s101 -O0
+!i113 1
+R4
+vtop
+R1
+!s110 1542130677
+!i10b 1
+!s100 Yf^k:5KJl:ZGJAnmkbiDC3
+I_B]@DLYX0PNGNU5:IjzD:2
+R2
+!s105 Top_sv_unit
+S1
+R0
+w1542117003
+8C:/Users/Andrew/Documents/Emerick/arm-processor/Top.sv
+FC:/Users/Andrew/Documents/Emerick/arm-processor/Top.sv
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1542130677.000000
+!s107 C:/Users/Andrew/Documents/Emerick/arm-processor/Top.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Andrew/Documents/Emerick/arm-processor/Top.sv|
+!s101 -O0
+!i113 1
+R4
