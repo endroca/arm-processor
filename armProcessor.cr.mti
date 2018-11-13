@@ -33,6 +33,13 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	condcheck
 
+} {} {}} C:/Users/Andrew/Documents/Emerick/arm-processor/Top.sv {1 {vlog -work work -sv -stats=none C:/Users/Andrew/Documents/Emerick/arm-processor/Top.sv
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module top
+
+Top level modules:
+	top
+
 } {} {}} C:/Users/Andrew/Documents/Emerick/arm-processor/Flopenr.sv {1 {vlog -work work -sv -stats=none C:/Users/Andrew/Documents/Emerick/arm-processor/Flopenr.sv
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module flopenr
