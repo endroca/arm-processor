@@ -17,9 +17,11 @@ module decoder (
         case(Op)
             2'b00:
                 case(Funct[4:1])
-                    4'b1101 : 
-			if (Funct[5]) controls = 10'b0000111001;
-			else controls = 10'b0000011001;
+                    4'b1101 : controls = 10'b0000101000;
+
+                    default:
+                        if (Funct[5])   controls = 10'b0000101001; 
+                        else            controls = 10'b0000001001; 
                 endcase
             // LDR
             2'b01: 
@@ -49,8 +51,7 @@ module decoder (
             // (C & V only updated for arith instructions)
             FlagW[1]      = Funct[0]; // FlagW[1] = S-bit
             // FlagW[0] = S-bit & (ADD | SUB)
-            FlagW[0]      = Funct[0] &
-                (ALUControl == 2'b00 | ALUControl == 2'b01);
+            FlagW[0]      = Funct[0] & (ALUControl == 2'b00 | ALUControl == 2'b01);
         end else begin
             ALUControl = 2'b00; // add for non-DP instructions
             FlagW      = 2'b00; // don't update Flags

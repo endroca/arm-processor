@@ -1,3 +1,10 @@
+//  regfile     rf(
+		//clk, 
+		//RegWrite, 
+		//RA1, RA2, Instr[15:12], 
+		//Result, PCPlus8, 
+		//SrcA, WriteData); 
+
 module regfile(input  logic        clk, 
                input  logic        we3, 
                input  logic [3:0]  ra1, ra2, wa3, 

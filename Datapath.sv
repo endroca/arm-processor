@@ -17,14 +17,14 @@ module datapath(input  logic        clk, reset,
   logic [3:0]  RA1, RA2;
 
   // next PC logic
-  mux2 #(32)  pcmux(PCPlus4, Result, PCSrc, PCNext);
-  flopr #(32) pcreg(clk, reset, PCNext, PC);
-  adder #(32) pcadd1(PC, 32'b100, PCPlus4);
-  adder #(32) pcadd2(PCPlus4, 32'b100, PCPlus8);
+  mux2 #(32)  pcmux(PCPlus4, Result, PCSrc, PCNext); //primeiro gegistrador (seleciona PCplus ou result)
+  flopr #(32) pcreg(clk, reset, PCNext, PC); // gerencia o reset para colocar o pc = 0 se o reset for acionado
+  adder #(32) pcadd1(PC, 32'b100, PCPlus4); // soma pc+4
+  adder #(32) pcadd2(PCPlus4, 32'b100, PCPlus8); //soma pc+4= pc+8
 
   // register file logic
-  mux2 #(4)   ra1mux(Instr[19:16], 4'b1111, RegSrc[0], RA1);
-  mux2 #(4)   ra2mux(Instr[3:0], Instr[15:12], RegSrc[1], RA2);
+  mux2 #(4)   ra1mux(Instr[19:16], 4'b1111, RegSrc[0], RA1); // seleciona as duas primeiras entradas de acordo com o RegSRC
+  mux2 #(4)   ra2mux(Instr[3:0], Instr[15:12], RegSrc[1], RA2); // seleciona as duas primeiras entradas de acordo com o RegSRC
   regfile     rf(clk, RegWrite, RA1, RA2,
                  Instr[15:12], Result, PCPlus8, 
                  SrcA, WriteData); 

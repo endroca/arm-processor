@@ -13,6 +13,7 @@ module bench1();
   initial
     begin
       reset <= 1; # 22; reset <= 0;
+	//reset <= 0;
     end
 
   // generate clock to sequence tests
