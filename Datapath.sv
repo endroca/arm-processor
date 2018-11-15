@@ -2,7 +2,7 @@ module datapath(input  logic        clk, reset,
                 input  logic [1:0]  RegSrc,
                 input  logic        RegWrite,
                 input  logic [1:0]  ImmSrc,
-                input  logic        ALUSrc,
+                input  logic        ALUSrcA, ALUSrcB,
                 input  logic [1:0]  ALUControl,
                 input  logic        MemtoReg,
                 input  logic        PCSrc,
@@ -13,7 +13,7 @@ module datapath(input  logic        clk, reset,
                 input  logic [31:0] ReadData);
 
   logic [31:0] PCNext, PCPlus4, PCPlus8;
-  logic [31:0] ExtImm, SrcA, SrcB, Result;
+  logic [31:0] ExtImm, SrcA, SrcB, SrcAnew, Result;
   logic [3:0]  RA1, RA2;
 
   // next PC logic
@@ -32,7 +32,9 @@ module datapath(input  logic        clk, reset,
   extend      ext(Instr[23:0], ImmSrc, ExtImm);
 
   // ALU logic
-  mux2 #(32)  srcbmux(WriteData, ExtImm, ALUSrc, SrcB);
-  alu         alu(SrcA, SrcB, ALUControl, 
+  mux2 #(32)  srcbmux(SrcA, 32'b0, ALUSrcA, SrcAnew);
+  mux2 #(32)  srcbmux2(WriteData, ExtImm, ALUSrcB, SrcB);  
+
+  alu         alu(SrcAnew, SrcB, ALUControl, 
                   ALUResult, ALUFlags);
 endmodule

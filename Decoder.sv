@@ -4,11 +4,11 @@ module decoder (
     input  logic [3:0] Rd,
     output logic [1:0] FlagW,
     output logic       PCS, RegW, MemW,
-    output logic       MemtoReg, ALUSrc,
+    output logic       MemtoReg, ALUSrcA, ALUSrcB,
     output logic [1:0] ImmSrc, RegSrc, ALUControl
 );
 
-    logic [9:0] controls;
+    logic [10:0] controls;
     logic       Branch, ALUOp;
 
     // Main Decoder
@@ -17,24 +17,24 @@ module decoder (
         case(Op)
             2'b00:
                 case(Funct[4:1])
-                    4'b1101 : controls = 10'b0000101000;
+                    4'b1101 : controls = 11'b00001101000;
 
                     default:
-                        if (Funct[5])   controls = 10'b0000101001; 
-                        else            controls = 10'b0000001001; 
+                        if (Funct[5])   controls = 11'b00000101001; 
+                        else            controls = 11'b00000001001; 
                 endcase
             // LDR
             2'b01: 
-                if (Funct[0])  controls = 10'b0001111000;
+                if (Funct[0])  controls = 11'b00010111000;
             // STR
-                else           controls = 10'b1001110100;
+                else           controls = 11'b10010110100;
             // B
-            2'b10: controls = 10'b0110100010;
+            2'b10: controls = 11'b01100100010;
             // Unimplemented
-            default: controls = 10'bx;
+            default: controls = 11'bx;
         endcase
 
-    assign {RegSrc, ImmSrc, ALUSrc, MemtoReg,
+    assign {RegSrc, ImmSrc, ALUSrcA, ALUSrcB, MemtoReg,
             RegW, MemW, Branch, ALUOp} = controls;
 
     // ALU Decoder
