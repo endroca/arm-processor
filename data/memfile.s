@@ -29,6 +29,16 @@ E1A02817
 1110 00 011010 0000 0010 1000 0 00 1 0111
 
 
+ROR R0, R2, #5
+E1A002E2
+00101 11 0 0010
+
+
+EOR R8, R9
+E0288009
+1110 00 000010 1000 1000 0000 0000 1001
+
+
 CMP – compare
 Flags set to result of (Rn − Operand2).
 CMN – compare negative
