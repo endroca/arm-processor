@@ -3,7 +3,7 @@ module datapath(input  logic        clk, reset,
                 input  logic        RegWrite,
                 input  logic [1:0]  ImmSrc,
                 input  logic        ALUSrcA, ALUSrcB,
-                input  logic [1:0]  ALUControl,
+                input  logic [2:0]  ALUControl,
                 input  logic        MemtoReg,
                 input  logic        PCSrc,
                 output logic [3:0]  ALUFlags,
@@ -37,6 +37,5 @@ module datapath(input  logic        clk, reset,
   mux2 #(32)  srcbmux(SrcA, 32'b0, ALUSrcA, SrcAnew);
   mux2 #(32)  srcbmux2(WriteDataShifted, ExtImm, ALUSrcB, SrcB);  
 
-  alu         alu(SrcAnew, SrcB, ALUControl, 
-                  ALUResult, ALUFlags);
+  aluV2         alu(SrcAnew, SrcB, ALUControl, ALUResult, ALUFlags);
 endmodule

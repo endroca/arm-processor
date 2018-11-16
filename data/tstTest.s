@@ -1,6 +1,6 @@
 		MOV		R0, #0 0x00
 		MOV		R1, #7 0x04
-		CMP		R0, #0 0x08
+		TST		R1, #7 0x08
 		BEQ		PULAR #0x0c
 		MOV		R0, #100 0x10
 		MOV		R1, #200 0x14
