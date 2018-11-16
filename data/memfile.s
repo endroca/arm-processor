@@ -5,6 +5,51 @@
 // TST, LSL, CMN, ADC
 // If successful, it should write the value 7 to address 100
 
+
+CMP R5,R3
+E1550003
+1110 00 010101 0101 0000 0000 0000 0011
+
+
+TST R5, R6
+E1150006
+1110 00 010001 0101 0000 0000 0000 0110
+
+MOV R2, R3
+E1A02003
+1110 00 011010 0000 0010 0000 0000 0011
+
+
+LSL R2, R7, #5
+E1A02287
+1110 00 011010 0000 0010 00101 00 0 0111
+
+LSL R2, R7, R8
+E1A02817
+1110 00 011010 0000 0010 1000 0 00 1 0111
+
+
+CMP – compare
+Flags set to result of (Rn − Operand2).
+CMN – compare negative
+Flags set to result of (Rn + Operand2).
+TST – bitwise test
+Flags set to result of (Rn AND Operand2).
+TEQ – test equivalence
+Flags set to result of (Rn EOR Operand2).
+
+
+CMP r0, #42
+Compare R0 to 42.
+CMN r2, #42
+Compare R2 to -42.
+TST r11, #1
+Test bit zero.
+TEQ r8, r9
+Test R8 equals R9.
+SUBS r1, r0, #42
+Compare R0 to 42, with result.
+
 MAIN	SUB R0, R15, R15 		; R0 = 0				
 	ADD R2, R0, #5      	; R2 = 5             
 	ADD R3, R0, #12    	; R3 = 12            

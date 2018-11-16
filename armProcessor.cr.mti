@@ -124,12 +124,19 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	extend
 
-} {} {}} D:/System/ARM/arm-processor/Decoder.sv {1 {vlog -work work -sv -stats=none D:/System/ARM/arm-processor/Decoder.sv
+} {} {}} D:/System/ARM/arm-processor/Shift.sv {1 {vlog -work work -sv -stats=none D:/System/ARM/arm-processor/Shift.sv
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module decoder
+-- Compiling module shift
 
 Top level modules:
-	decoder
+	shift
+
+} {} {}} D:/System/ARM/arm-processor/Datapath.sv {1 {vlog -work work -sv -stats=none D:/System/ARM/arm-processor/Datapath.sv
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module datapath
+
+Top level modules:
+	datapath
 
 } {} {}} C:/Users/Andrew/Documents/Emerick/arm-processor/Condlogic.sv {1 {vlog -work work -sv -stats=none C:/Users/Andrew/Documents/Emerick/arm-processor/Condlogic.sv
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015

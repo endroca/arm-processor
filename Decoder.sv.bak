@@ -17,17 +17,35 @@ module decoder (
         case(Op)
             2'b00:
                 case(Funct[4:1])
-                    4'b1101 : controls = 11'b00001101000;
+                    4'b1101 :
+			//MOV REGISTER, IMMEDIATE
+			if (Funct[5])	controls = 11'b00001101000;
+			//MOV REGISTER, REGISTER
+			else		controls = 11'b00001001000;
+
+                    4'b1010 :
+			//CMP REGISTER, IMMEDIATE
+			if (Funct[5])	controls = 11'b00000100001;
+			//CMP REGISTER, REGISTER
+			else		controls = 11'b00000000001;
+
+                    4'b1000 :
+			//TST REGISTER, IMMEDIATE
+			if (Funct[5])	controls = 11'b00000100001;
+			//TST REGISTER, REGISTER
+			else		controls = 11'b00000000001;
 
                     default:
+			//ALU FUNCTIONS
                         if (Funct[5])   controls = 11'b00000101001; 
                         else            controls = 11'b00000001001; 
                 endcase
-            // LDR
-            2'b01: 
-                if (Funct[0])  controls = 11'b000001111000;
+            
+            2'b01:
+	    // LDR
+                if (Funct[0])  controls = 11'b00010111000;
             // STR
-                else           controls = 11'b100100110100;
+                else           controls = 11'b10010110100;
             // B
             2'b10: controls = 11'b01100100010;
             // Unimplemented
@@ -42,9 +60,11 @@ module decoder (
         if (ALUOp) begin                 // which DP Instr?
             case(Funct[4:1])
                 4'b0100: ALUControl = 2'b00; // ADD
+		4'b1000: ALUControl = 2'b00; // ADD
                 4'b0010: ALUControl = 2'b01; // SUB
                 4'b0000: ALUControl = 2'b10; // AND
                 4'b1100: ALUControl = 2'b11; // ORR
+		4'b1010: ALUControl = 2'b01; // CMP
                 default: ALUControl = 2'bx;  // unimplemented
             endcase
             // update flags if S bit is set

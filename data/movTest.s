@@ -1,0 +1,5 @@
+MOV R0, #0
+MOV R2, #7
+MOV R5, R0
+MOV R6, R2
+STR R6, [R5, #100]

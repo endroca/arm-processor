@@ -13,7 +13,7 @@ module datapath(input  logic        clk, reset,
                 input  logic [31:0] ReadData);
 
   logic [31:0] PCNext, PCPlus4, PCPlus8;
-  logic [31:0] ExtImm, SrcA, SrcB, Result;
+  logic [31:0] ExtImm, SrcA, SrcB, SrcAnew, Result, WriteDataShifted;
   logic [3:0]  RA1, RA2;
 
   // next PC logic
@@ -27,14 +27,16 @@ module datapath(input  logic        clk, reset,
   mux2 #(4)   ra2mux(Instr[3:0], Instr[15:12], RegSrc[1], RA2); // seleciona as duas primeiras entradas de acordo com o RegSRC
   regfile     rf(clk, RegWrite, RA1, RA2,
                  Instr[15:12], Result, PCPlus8, 
-                 SrcA, WriteData); 
+                 SrcA, WriteData);
+  shift       sht(WriteData, Instr[6:5], Instr[11:5], WriteDataShifted);
+
   mux2 #(32)  resmux(ALUResult, ReadData, MemtoReg, Result);
   extend      ext(Instr[23:0], ImmSrc, ExtImm);
 
   // ALU logic
-  mux2 #(32)  srcbmux(SrcA, 32'b0, ALUSrcA, SrcA);
-  mux2 #(32)  srcbmux2(WriteData, ExtImm, ALUSrcB, SrcB);  
+  mux2 #(32)  srcbmux(SrcA, 32'b0, ALUSrcA, SrcAnew);
+  mux2 #(32)  srcbmux2(WriteDataShifted, ExtImm, ALUSrcB, SrcB);  
 
-  alu         alu(SrcA, SrcB, ALUControl, 
+  alu         alu(SrcAnew, SrcB, ALUControl, 
                   ALUResult, ALUFlags);
 endmodule
