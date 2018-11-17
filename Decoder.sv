@@ -50,7 +50,7 @@ module decoder (
             // STR
                 else
 			if (~Funct[5]) 	controls = 11'b10010110100;
-			else 		controls = 11'b10010010100;
+			else 		controls = 11'b00010010100;
             // B
             2'b10: controls = 11'b01100100010;
             // Unimplemented
