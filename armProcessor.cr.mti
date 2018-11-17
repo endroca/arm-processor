@@ -89,6 +89,20 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	condlogic
 
+} {} {}} D:/System/ARM/arm-processor/AluV2.sv {1 {vlog -work work -sv -stats=none D:/System/ARM/arm-processor/AluV2.sv
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module aluV2
+
+Top level modules:
+	aluV2
+
+} {} {}} D:/System/ARM/arm-processor/BenchAluV2.sv {1 {vlog -work work -sv -stats=none D:/System/ARM/arm-processor/BenchAluV2.sv
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module benchAluV2
+
+Top level modules:
+	benchAluV2
+
 } {} {}} D:/System/ARM/arm-processor/Flopr.sv {1 {vlog -work work -sv -stats=none D:/System/ARM/arm-processor/Flopr.sv
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module flopr
@@ -131,19 +145,19 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	adder
 
+} {} {}} D:/System/ARM/arm-processor/Fibonacci.sv {1 {vlog -work work -sv -stats=none D:/System/ARM/arm-processor/Fibonacci.sv
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module fibonacci
+
+Top level modules:
+	fibonacci
+
 } {} {}} D:/System/ARM/arm-processor/Shift.sv {1 {vlog -work work -sv -stats=none D:/System/ARM/arm-processor/Shift.sv
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module shift
 
 Top level modules:
 	shift
-
-} {} {}} D:/System/ARM/arm-processor/Decoder.sv {1 {vlog -work work -sv -stats=none D:/System/ARM/arm-processor/Decoder.sv
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module decoder
-
-Top level modules:
-	decoder
 
 } {} {}} C:/Users/Andrew/Documents/Emerick/arm-processor/AluV2.sv {1 {vlog -work work -sv -stats=none C:/Users/Andrew/Documents/Emerick/arm-processor/AluV2.sv
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
@@ -166,13 +180,6 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	datapath
 
-} {} {}} D:/System/ARM/arm-processor/Extend.sv {1 {vlog -work work -sv -stats=none D:/System/ARM/arm-processor/Extend.sv
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module extend
-
-Top level modules:
-	extend
-
 } {} {}} C:/Users/Andrew/Documents/Emerick/arm-processor/Flopr.sv {1 {vlog -work work -sv -stats=none C:/Users/Andrew/Documents/Emerick/arm-processor/Flopr.sv
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module flopr
@@ -193,6 +200,13 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 
 Top level modules:
 	arm
+
+} {} {}} D:/System/ARM/arm-processor/Extend.sv {1 {vlog -work work -sv -stats=none D:/System/ARM/arm-processor/Extend.sv
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module extend
+
+Top level modules:
+	extend
 
 } {} {}} C:/Users/Andrew/Documents/Emerick/arm-processor/Mux2.sv {1 {vlog -work work -sv -stats=none C:/Users/Andrew/Documents/Emerick/arm-processor/Mux2.sv
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
@@ -236,19 +250,19 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	dmem
 
-} {} {}} D:/System/ARM/arm-processor/Top.sv {1 {vlog -work work -sv -stats=none D:/System/ARM/arm-processor/Top.sv
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module top
-
-Top level modules:
-	top
-
 } {} {}} C:/Users/Andrew/Documents/Emerick/arm-processor/Shift.sv {1 {vlog -work work -sv -stats=none C:/Users/Andrew/Documents/Emerick/arm-processor/Shift.sv
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module shift
 
 Top level modules:
 	shift
+
+} {} {}} D:/System/ARM/arm-processor/Top.sv {1 {vlog -work work -sv -stats=none D:/System/ARM/arm-processor/Top.sv
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module top
+
+Top level modules:
+	top
 
 } {} {}} D:/System/ARM/arm-processor/Mux2.sv {1 {vlog -work work -sv -stats=none D:/System/ARM/arm-processor/Mux2.sv
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015

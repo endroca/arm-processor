@@ -44,9 +44,13 @@ module decoder (
             
             2'b01:
 	    // LDR
-                if (Funct[0])  controls = 11'b00010111000;
+                if (Funct[0])
+			if (~Funct[5]) 	controls = 11'b00010111000;
+			else 		controls = 11'b00010011000;
             // STR
-                else           controls = 11'b10010110100;
+                else
+			if (~Funct[5]) 	controls = 11'b10010110100;
+			else 		controls = 11'b10010010100;
             // B
             2'b10: controls = 11'b01100100010;
             // Unimplemented

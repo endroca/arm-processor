@@ -44,9 +44,13 @@ module decoder (
             
             2'b01:
 	    // LDR
-                if (Funct[0])  controls = 11'b00010111000;
+                if (Funct[0])
+			if (~Funct[5]) 	controls = 11'b00010111000;
+			else 		controls = 11'b00010011000;
             // STR
-                else           controls = 11'b10010110100;
+                else
+			if (~Funct[5]) 	controls = 11'b10010110100;
+			else 		controls = 11'b00010010100;
             // B
             2'b10: controls = 11'b01100100010;
             // Unimplemented
@@ -64,7 +68,7 @@ module decoder (
                 4'b0010: ALUControl = 3'b001; // SUB
                 4'b0000: ALUControl = 3'b010; // AND
                 4'b1100: ALUControl = 3'b011; // ORR
-		4'b1000: ALUControl = 3'b010; // TST = AND
+		4'b1000: ALUControl = 3'b001; // TST = AND (COLOQUEI SUB)
 		4'b1010: ALUControl = 3'b001; // CMP
                 default: ALUControl = 3'bx;  // unimplemented
             endcase

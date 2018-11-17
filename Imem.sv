@@ -4,7 +4,7 @@ module imem(input  logic [31:0] a,
   logic [31:0] RAM[63:0];
 
   initial
-      $readmemh("data/tstTest.dat",RAM);
+      $readmemh("data/fibonacci.dat",RAM);
 
   assign rd = RAM[a[31:2]]; // word aligned
 endmodule
