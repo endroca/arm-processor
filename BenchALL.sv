@@ -1,10 +1,11 @@
-module fibonacci();
+module benchALL();
 
   logic        clk;
   logic        reset;
 
   logic [31:0] WriteData, DataAdr;
   logic        MemWrite;
+  logic [6:0] counter = 7'b0;
 
   // instantiate device to be tested
   top dut(clk, reset, WriteData, DataAdr, MemWrite);
@@ -19,15 +20,17 @@ module fibonacci();
   // generate clock to sequence tests
   always
     begin
-      clk <= 1; # 5; clk <= 0; # 5;
+      clk <= 1; # 5; 
+      clk <= 0; # 5;
+      counter <= counter + 1;
     end
 
   // check results
   always @(negedge clk)
     begin
-      if(MemWrite) begin
-        if(WriteData === 55) begin
-          $display("Simulation succeeded");
+      if(reset === 0) begin
+        if(counter === 100) begin
+          $display("Simulation stop");
           $stop;
         //end else if (WriteData !== 1 & WriteData !== 2 & WriteData !== 3 & WriteData !== 5) begin //| WriteData !== 3 | WriteData !== 5 | WriteData !== 5
         //  $display("Simulation failed");

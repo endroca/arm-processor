@@ -1,4 +1,4 @@
-module fibonacci();
+module pgMatricula();
 
   logic        clk;
   logic        reset;
@@ -26,7 +26,7 @@ module fibonacci();
   always @(negedge clk)
     begin
       if(MemWrite) begin
-        if(WriteData === 55) begin
+        if(WriteData === 166912) begin
           $display("Simulation succeeded");
           $stop;
         //end else if (WriteData !== 1 & WriteData !== 2 & WriteData !== 3 & WriteData !== 5) begin //| WriteData !== 3 | WriteData !== 5 | WriteData !== 5

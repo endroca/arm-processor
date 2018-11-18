@@ -3,9 +3,10 @@ module top(input  logic        clk, reset,
            output logic        MemWrite);
 
   logic [31:0] PC, Instr, ReadData;
+  logic MemByte;
   
   // instantiate processor and memories
-  arm arm(clk, reset, PC, Instr, MemWrite, DataAdr, WriteData, ReadData);
+  arm arm(clk, reset, PC, Instr, MemWrite, MemByte, DataAdr, WriteData, ReadData);
   imem imem(PC, Instr);
-  dmem dmem(clk, MemWrite, DataAdr, WriteData, ReadData);
+  dmem dmem(clk, MemByte, MemWrite, DataAdr, WriteData, ReadData);
 endmodule

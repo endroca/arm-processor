@@ -6,14 +6,14 @@ module controller(input  logic         clk, reset,
                   output logic [1:0]   ImmSrc,
                   output logic         ALUSrcA, ALUSrcB,
                   output logic [2:0]   ALUControl,
-                  output logic         MemWrite, MemtoReg,
+                  output logic         MemWrite, MemByte, MemtoReg,
                   output logic         PCSrc);
 
   logic [1:0] FlagW;
   logic       PCS, RegW, MemW;
   
   decoder dec(Instr[27:26], Instr[25:20], Instr[15:12],
-              FlagW, PCS, RegW, MemW,
+              FlagW, PCS, RegW, MemW, MemByte,
               MemtoReg, ALUSrcA, ALUSrcB, ImmSrc, RegSrc, ALUControl);
 
 
