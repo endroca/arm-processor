@@ -107,7 +107,7 @@ module decoder (
                 4'b0010: ALUControl = 3'b001; // SUB
                 4'b0000: ALUControl = 3'b010; // AND
                 4'b1100: ALUControl = 3'b011; // ORR
-                4'b1000: ALUControl = 3'b001; // TST = AND (COLOQUEI SUB)
+                4'b1000: ALUControl = 3'b010; // TST = AND SINALIZADO SEM ATUAILZAR REGISTRADOR
                 4'b1010: ALUControl = 3'b001; // CMP
                 default: ALUControl = 3'bx;  // unimplemented
             endcase
@@ -124,3 +124,13 @@ module decoder (
     // PC Logic
     assign PCS = ((Rd == 4'b1111) & RegW) | Branch;
 endmodule
+
+
+//CMP ? compare
+//-Flags set to result of (Rn ? Operand2).
+//CMN ? compare negative
+//-Flags set to result of (Rn + Operand2).
+//TST ? bitwise test
+//-Flags set to result of (Rn AND Operand2).
+//TEQ ? test equivalence
+//-Flags set to result of (Rn EOR Operand2).
