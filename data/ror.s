@@ -1,2 +1,5 @@
-MOV		R1, #1
-MOV		R2, R1,ROR #29
+MOV		R0, #14
+MOV		R1, R0,ROR #1
+MOV		R2, #100
+
+STR		R1, [R2]

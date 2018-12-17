@@ -13,8 +13,9 @@ module datapath(input  logic        clk, reset,
                 input  logic [31:0] ReadData);
 
   logic [31:0] PCNext, PCPlus4, PCPlus8;
-  logic [31:0] ExtImm, SrcA, SrcB, SrcC, SrcAnew, Result, WriteDataShifted;
-  logic [3:0]  RA1, RA2;
+  logic [31:0] ExtImm, SrcA, SrcB, rd2, SrcAnew, Result, WriteDataShifted, RshiftValue, shamt;
+  logic [3:0] RA1, RA2, Rshift;
+  logic [1:0] commandShift;
 
   // next PC logic
   mux2 #(32)  pcmux(PCPlus4, Result, PCSrc, PCNext); //primeiro gegistrador (seleciona PCplus ou result)
@@ -25,10 +26,16 @@ module datapath(input  logic        clk, reset,
   // register file logic
   mux2 #(4)   ra1mux(Instr[19:16], 4'b1111, RegSrc[0], RA1); // seleciona as duas primeiras entradas de acordo com o RegSRC
   mux2 #(4)   ra2mux(Instr[3:0], Instr[15:12], RegSrc[1], RA2); // seleciona as duas primeiras entradas de acordo com o RegSRC
+  
+
+  shiftManager shiftManager(Instr[11:4], Rshift, RshiftValue, commandShift, shamt);
+
   regfile     rf(clk, RegWrite, RA1, RA2,
                  Instr[15:12], Result, PCPlus8, 
-                 SrcA, WriteData, SrcC);
-  shift       sht(WriteData, Instr[6:5], Instr[11:7], WriteDataShifted);
+                 SrcA, rd2, WriteData,
+                 Rshift, RshiftValue);
+  
+  shift       sht(rd2, commandShift, Instr[11:7], WriteDataShifted);
 
   mux2 #(32)  resmux(ALUResult, ReadData, MemtoReg, Result);
   extend      ext(Instr[23:0], ImmSrc, ExtImm);
